@@ -426,7 +426,7 @@ let dynamicIsland: boolean;
 export function hasDynamicIsland() {
   if (dynamicIsland === undefined) {
     let _brand = getBrand();
-    let _model = getModel();
+    let _model = getModel().split(',')[0];
     dynamicIsland =
       devicesWithDynamicIsland.findIndex(
         (item) =>
